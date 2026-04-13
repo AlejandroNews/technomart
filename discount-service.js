@@ -49,9 +49,4 @@ router.delete('/admin/delete', (req, res) => {
     return res.json({message: 'Discount code deleted successfully'});
 });
 
-async function searchDiscount(query) {
-    const response = await fetch('api/discounts/search?1=' + query);
-    const data = response.json();
-    return data;
-}
 module.exports = router;
